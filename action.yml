@@ -1,0 +1,36 @@
+name: 'Pressbooks Make POT Action'
+description: 'This action updates the POT file for a Pressbooks plugin or theme based on the contents of the plugin or theme repository.'
+author: 'greatislander'
+branding:
+  icon: 'globe'
+  color: 'red'
+inputs:
+  path:
+    description: 'Path where the POT file should be saved.'
+    required: true
+  slug:
+    description: 'Slug of the Pressbooks plugin or theme.'
+    required: false
+  textdomain:
+    description: 'Text domain of the Pressbooks plugin or theme.'
+    required: false
+  name:
+    description: 'Name of the Pressbooks plugin or theme.'
+    required: true
+  headers:
+    description: 'JSON array of custom headers which will be added to the POT file. Defaults to an empty array.'
+    required: false
+  excludes:
+    description: 'Comma-separated list of paths to exclude when scanning for translateable strings.'
+    default: vendor
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.slug }}
+    - ${{ inputs.textdomain }}
+    - ${{ inputs.name }}
+    - ${{ inputs.headers }}
+    - ${{ inputs.excludes }}
