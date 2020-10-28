@@ -1,5 +1,5 @@
 name: 'Pressbooks Make POT Action'
-description: 'This action updates the POT file for a Pressbooks plugin or theme based on the contents of the plugin or theme repository.'
+description: 'This Github Action updates the POT file for a Pressbooks plugin or theme based on the contents of the plugin or theme repository.'
 author: 'greatislander'
 branding:
   icon: 'globe'
