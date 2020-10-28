@@ -1,0 +1,35 @@
+{
+  "name": "action-pressbooks-make-pot",
+  "version": "1.0.0",
+  "description": "This action updates the POT file for a Pressbooks plugin or theme based on the contents of the plugin or theme repository.",
+  "scripts": {
+    "release": "standard-version -t ''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greatislander/action-pressbooks-make-pot.git"
+  },
+  "keywords": [
+    "github",
+    "action",
+    "localization",
+    "wordpress"
+  ],
+  "author": "Ned Zimmerman <nedzed@hey.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/greatislander/action-pressbooks-make-pot/issues"
+  },
+  "homepage": "https://github.com/greatislander/action-pressbooks-make-pot#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "husky": "4.3.0",
+    "standard-version": "9.0.0"
+  }
+}
