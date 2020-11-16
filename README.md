@@ -31,11 +31,11 @@ on:
       - main
 
 jobs:
-  WP_POT_Generator:
+  update-pot:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: WordPress POT Generator
+    - name: Update POT file
       uses: pressbooks/action-pressbooks-make-pot@main
       with:
         path: './languages' # Directory where the file should be saved.
@@ -49,4 +49,3 @@ jobs:
 ```
 
 [action-wp-pot-generator]: https://github.com/varunsridharan/action-wp-pot-generator
-
