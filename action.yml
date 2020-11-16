@@ -18,7 +18,7 @@ inputs:
     description: 'Name of the Pressbooks plugin or theme.'
     required: true
   headers:
-    description: 'JSON array of custom headers which will be added to the POT file. Defaults to an empty array.'
+    description: 'JSON object of custom headers and values which will be added to the POT file.'
     required: false
   excludes:
     description: 'Comma-separated list of paths to exclude when scanning for translateable strings.'
