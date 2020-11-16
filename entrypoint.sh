@@ -38,8 +38,5 @@ elif [[ ! -d $PATH ]]; then
     mkdir $PATH
 fi
 
-# Install PB-CLI.
-wp package install pressbooks/pb-cli:dev-dev --allow-root
-
 # Generate the POT file.
 wp pb make-pot . "$PATH/$TEXTDOMAIN.pot" --exclude="$EXCLUDES" --slug="$SLUG" --package-name="$NAME" --headers="$HEADERS" --domain="$TEXTDOMAIN" --allow-root
