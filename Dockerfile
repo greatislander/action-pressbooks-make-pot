@@ -1,7 +1,4 @@
-FROM varunsridharan/actions-alpine-php:latest
-
-# Setup Pressbooks CLI
-RUN wp package install pressbooks/pb-cli:dev-dev --allow-root
+FROM frojd/composer-php-7.4:1.9.3
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
