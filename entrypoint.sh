@@ -39,7 +39,9 @@ elif [[ ! -d $PATH ]]; then
 fi
 
 # Set up WP CLI and Pressbooks CLI
-composer global require wp-cli/wp-cli-bundle
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+mv wp-cli.phar /usr/local/bin/wp
 wp package install pressbooks/pb-cli:dev-dev --allow-root
 
 # Generate the POT file from other resources.

@@ -1,4 +1,4 @@
-FROM frojd/composer-php-7.4:1.9.3
+FROM varunsridharan/actions-alpine-php:latest
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
