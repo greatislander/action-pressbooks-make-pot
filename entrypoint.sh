@@ -32,11 +32,11 @@ if [[ -z "$TEXTDOMAIN" ]]; then
 fi
 
 if [[ ! -e $PATH ]]; then
-    mkdir $PATH
+    echo "Save destination not found. Please make sure it exists in your repository."
+	exit 1
 elif [[ ! -d $PATH ]]; then
-    rm -r $PATH
-    mkdir $PATH
+    echo "Save destination not found. Please make sure it exists in your repository."
 fi
 
 # Generate the POT file from other resources.
-/usr/local/bin/wp pb make-pot . "$PATH/$TEXTDOMAIN.pot" --exclude="$EXCLUDES" --slug="$SLUG" --package-name="$NAME" --headers="$HEADERS" --domain="$TEXTDOMAIN" --allow-root
+wp pb make-pot . "$PATH/$TEXTDOMAIN.pot" --exclude="$EXCLUDES" --slug="$SLUG" --package-name="$NAME" --headers="$HEADERS" --domain="$TEXTDOMAIN" --allow-root
